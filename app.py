@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, flash
 from flask_navigation import Navigation
 
 app = Flask(__name__)
-nav = Navigation(app)
+# nav = Navigation(app)
 app.secret_key = "manbearpig_MUDMAN888"
 
 # 	nav.Bar('top', [
