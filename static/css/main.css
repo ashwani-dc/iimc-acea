@@ -1,0 +1,98 @@
+body {
+    text-align: center;
+    background: whitesmoke;
+}
+p {
+    color: white;
+    font-family: Shanti;
+    font-size: 1.2em;
+    display: inline-block;
+    margin:  20px;
+} 
+img {
+    opacity: 0.8;
+    height: 100vh;
+    width: 100vw;
+}
+input {
+  width: 300px;
+  margin: 20px 20px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  font-family: Shanti;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+input:focus {
+    outline: none;
+    border: solid 5px #00FFCE;
+}
+
+#greet {
+    background-color: PaleVioletRed;
+    border:  none;
+    width:  200px;
+    color: white;
+}
+
+#greet:hover {
+    background-color: MediumVioletRed;
+}
+
+.text-center{
+    text-align: center;
+    margin-top: -2%;
+    margin-bottom: 2%;
+}
+
+.topnav {
+    overflow: hidden;
+    background: linear-gradient(
+45deg, black, #124a5f) !important;
+color:white;
+}
+
+.container{
+    margin: 3%;
+}
+
+.success{
+    background: green !important;
+}
+.error{
+    background: red !important;
+}
+
+.title-header:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    height: 3px;
+    margin: 0 0 0;
+    width: 50px;
+    margin: 10px 0;
+}
+
+.title-header{
+    font-weight: 600;
+    color: #0f4052;
+    font-size: 2.2rem;
+}
+
+.title-subheader{
+    font-weight: 600;
+    color: #690a20;
+}
+
+.logo-header{
+    margin-top: 1%;
+            float: left;    padding-left: 2%;        
+}
+
+.cont-types {
+    box-shadow: 2px 2px 8px 3px #d3cfcf;
+    padding: 5%;
+}
