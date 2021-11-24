@@ -96,3 +96,17 @@ color:white;
     box-shadow: 2px 2px 8px 3px #d3cfcf;
     padding: 5%;
 }
+.div-para p{
+    color: black;
+    font-size: 14px;   
+}
+
+table.table.table-stripped {
+    font-size: 13px;
+}
+table.table.table-bordered {
+    font-size: 13px;
+}
+.col-md-6.col-lg-6.col-sm-12 {
+    padding: 1.5%;
+}

@@ -105,153 +105,468 @@
      
     <div class="row">
       <div class="col-md-6 col-lg-6 col-sm-12">
-        <div class="cont-types">
-          <div class="text-center">
-            <h4 class="title-subheader">Petrignano</h4>
-          </div>
-          <table class="table table-stripped">
-            <thead>
-              <tr>
-                <th colspan="2" style="    background: #0a5b7a; color: white;">
-                  ETS Decomposition
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for data in aquifer_data %}  
-              <tr>
-                <th>Stationarity</th><td {% if data.Stationarity == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Stationarity}}</td>
-              </tr>
-              <tr>
-                <th>Trend</th><td {% if data.Trend == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Trend}}</td>
-              </tr>
-              <tr>
-                <th>Cyclic</th><td {% if data.Cyclic == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Cyclic}}</td>
-              </tr>
+        <div class="row">
+          <div class="cont-types">
+            <div class="text-center">
+              <h4 class="title-subheader">Petrignano</h4>
+            </div>
+            <!-- <div class="div-para">
+              <p>
+                The wells field of the alluvial plain between Ospedalicchio di Bastia Umbra and Petrignano is fed by three underground aquifers separated by low permeability septa. The aquifer can be considered a water table groundwater and is also fed by the Chiascio river. The groundwater levels are influenced by the following parameters: rainfall, depth to groundwater, temperatures and drainage volumes, level of the Chiascio river.
+              </p>
+            </div> -->
+            <table class="table table-bordered">
              
-              {% endfor %}
-            </tbody>
-           
-          </table>
-  
-          <table class="table table-stripped">
-            <thead>
-              <tr>
-                <th colspan="2" style="    background: #0a5b7a; color: white;">
-                  Initial Analysis
-                </th>
-              </tr>
-            
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  Target
-                </th>
-                <td colspan="4">
-                  Temperature
-                </td>
-              </tr>
-              <tr >
-                <th rowspan="4">
-                  Features
-                </th>
-                <td>
-                  Date
-                </td>
-                <tr>  <td>Rainfall</td></tr>
-                <tr> <td>Drainage_volume</td></tr>
-                <tr> <td>River_hydrometry</td></tr>
-               
-               
-               
-               
+              <tbody>
+                {% for data in petrignano_summary %}  
+                <tr>
+                  <th>Number of Rows</th><td>{{data.Rows}}</td>
+                  <th>Number of Columns</th><td>{{data.Columns}}</td>
+                </tr>
               
-              </tr>
-            </tbody>
-            <tbody>
-  
-            </tbody>
-          </table>
+                <tr>
+                  <th>Start Date</th><td>{{data.SDate}}</td>
+                  <th>End Date</th><td>{{data.EDate}}</td>
+                </tr>
+               
+                <tr>
+                  <th>Model</th><td>{{data.Model}}</td>
+                  <th>RMSE</th><td>{{data.RMSE}}</td>
+                </tr>
+               
+                <tr>
+                  <th colspan='4' style="text-align: center;    color: #7a0a0a;"> <span>{{data.Conclusion}}</span></th>
+                </tr>
+                {% endfor %}
+              </tbody>
+             
+            </table>
+            <div class="row">
+              <div class="col-md-6 col-lg-6 col-sm-12">
+                <table class="table table-stripped">
+                  <thead>
+                    <tr>
+                      <th colspan="2" style="    background: #0a5b7a; color: white;">
+                        ETS Decomposition
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for data in aquifer_data %}  
+                    <tr>
+                      <th>Stationarity</th><td {% if data.Stationarity == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Stationarity}}</td>
+                    </tr>
+                    <tr>
+                      <th>Trend</th><td {% if data.Trend == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Trend}}</td>
+                    </tr>
+                    <tr>
+                      <th>Cyclic</th><td {% if data.Cyclic == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Cyclic}}</td>
+                    </tr>
+                   
+                    {% endfor %}
+                  </tbody>
+                 
+                </table>
+              </div>
+              <div class="col-md-6 col-lg-6 col-sm-12">
+                <table class="table table-stripped">
+                  <thead>
+                    <tr>
+                      <th colspan="2" style="    background: #0a5b7a; color: white;">
+                        Initial Analysis
+                      </th>
+                    </tr>
+                  
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        Target
+                      </th>
+                      <td colspan="4">
+                        Temperature
+                      </td>
+                    </tr>
+                    <tr >
+                      <th rowspan="4">
+                        Features
+                      </th>
+                      <td>
+                        Date, Rainfall, Drainage_volume, River_hydrometry
+                      </td>
+                      <!-- <tr>  <td>Rainfall</td></tr>
+                      <tr> <td>Drainage_volume</td></tr>
+                      <tr> <td>River_hydrometry</td></tr> -->
+                     
+                     
+                     
+                     
+                    
+                    </tr>
+                  </tbody>
+                  <tbody>
+        
+                  </tbody>
+                </table>
+              </div>
+              
+      
+          
+            </div>
+          </div>
+            
+          
+        
         </div>
+        
      
       </div>
       <div class="col-md-6 col-lg-6 col-sm-12">
-        <div class="cont-types">
-          <div class="text-center">
-            <h4 class="title-subheader">Auser</h4>
-          </div>
-          <table class="table table-stripped">
-            <thead>
-              <tr>
-                <th colspan="2" style="    background: #0a5b7a; color: white;">
-                  ETS Decomposition
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for data in aquifer_data %}  
-              <tr>
-                <th>Stationarity</th><td {% if data.Stationarity == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Stationarity}}</td>
-              </tr>
-              <tr>
-                <th>Trend</th><td {% if data.Trend == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Trend}}</td>
-              </tr>
-              <tr>
-                <th>Cyclic</th><td {% if data.Cyclic == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Cyclic}}</td>
-              </tr>
-             
-              {% endfor %}
-            </tbody>
-           
-          </table>
-  
-          <table class="table table-stripped">
-            <thead>
-              <tr>
-                <th colspan="2" style="    background: #0a5b7a; color: white;">
-                  Initial Analysis
-                </th>
-              </tr>
-            
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  Target
-                </th>
-                <td colspan="4">
-                  Temperature
-                </td>
-              </tr>
-              <tr >
-                <th rowspan="4">
-                  Features
-                </th>
-                <td>
-                  Date
-                </td>
-                <tr>  <td>Rainfall</td></tr>
-                <tr> <td>Drainage_volume</td></tr>
-                <tr> <td>River_hydrometry</td></tr>
+        <div class="row">
+          <div class="cont-types">
+            <div class="text-center">
+              <h4 class="title-subheader">Auser</h4>
+            </div>
+            <table class="table table-bordered">
                
-               
-               
-               
+              <tbody>
+                {% for data in auser_summary %}  
+                <tr>
+                  <th>Number of Rows</th><td>{{data.Rows}}</td>
+                  <th>Number of Columns</th><td>{{data.Columns}}</td>
+                </tr>
               
-              </tr>
-            </tbody>
-            <tbody>
-  
-            </tbody>
-          </table>
+                <tr>
+                  <th>Start Date</th><td>{{data.SDate}}</td>
+                  <th>End Date</th><td>{{data.EDate}}</td>
+                </tr>
+               
+                <tr>
+                  <th>Model</th><td>{{data.Model}}</td>
+                  <th>RMSE</th><td>{{data.RMSE}}</td>
+                </tr>
+                
+                <tr>
+                  <th colspan='4' style="text-align: center;    color: #7a0a0a;"> <span>{{data.Conclusion}}</span></th>
+                </tr>
+                {% endfor %}
+              </tbody>
+             
+            </table>
+            <div class="row">
+              <div class="col-md-6 col-lg-6 col-sm-12">
+                <table class="table table-stripped">
+                  <thead>
+                    <tr>
+                      <th colspan="2" style="    background: #0a5b7a; color: white;">
+                        ETS Decomposition
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for data in aquifer_data %}  
+                    <tr>
+                      <th>Stationarity</th><td {% if data.Stationarity == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Stationarity}}</td>
+                    </tr>
+                    <tr>
+                      <th>Trend</th><td {% if data.Trend == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Trend}}</td>
+                    </tr>
+                    <tr>
+                      <th>Cyclic</th><td {% if data.Cyclic == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Cyclic}}</td>
+                    </tr>
+                   
+                    {% endfor %}
+                  </tbody>
+                 
+                </table>
+              </div>
+              <div class="col-md-6 col-lg-6 col-sm-12">
+                <table class="table table-stripped">
+                  <thead>
+                    <tr>
+                      <th colspan="2" style="    background: #0a5b7a; color: white;">
+                        Initial Analysis
+                      </th>
+                    </tr>
+                  
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        Target
+                      </th>
+                      <td colspan="4">
+                        Temperature
+                      </td>
+                    </tr>
+                    <tr >
+                      <th rowspan="4">
+                        Features
+                      </th>
+                      <td>
+                        Date, Rainfall, Drainage_volume, River_hydrometry
+                      </td>
+                      <!-- <tr>  <td>Rainfall</td></tr>
+                      <tr> <td>Drainage_volume</td></tr>
+                      <tr> <td>River_hydrometry</td></tr> -->
+                     
+                     
+                     
+                     
+                    
+                    </tr>
+                  </tbody>
+                  <tbody>
+        
+                  </tbody>
+                </table>
+              </div>
+              
+      
+          
+            </div>
+          </div>
         </div>
+       
      
       </div>
  
     
     </div>
       
+   
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-12">
+        <div class="row">
+          <div class="cont-types">
+            <div class="text-center">
+              <h4 class="title-subheader">Doganella</h4>
+            </div>
+            <!-- <div class="div-para">
+              <p>
+                The wells field of the alluvial plain between Ospedalicchio di Bastia Umbra and Petrignano is fed by three underground aquifers separated by low permeability septa. The aquifer can be considered a water table groundwater and is also fed by the Chiascio river. The groundwater levels are influenced by the following parameters: rainfall, depth to groundwater, temperatures and drainage volumes, level of the Chiascio river.
+              </p>
+            </div> -->
+            <table class="table table-bordered">
+             
+              <tbody>
+                {% for data in doganella_summary %}  
+                <tr>
+                  <th>Number of Rows</th><td>{{data.Rows}}</td>
+                  <th>Number of Columns</th><td>{{data.Columns}}</td>
+                </tr>
+              
+                <tr>
+                  <th>Start Date</th><td>{{data.SDate}}</td>
+                  <th>End Date</th><td>{{data.EDate}}</td>
+                </tr>
+               
+                <tr>
+                  <th>Model</th><td>{{data.Model}}</td>
+                  <th>RMSE</th><td>{{data.RMSE}}</td>
+                </tr>
+               
+                <tr style="    height: 94px;">
+                  <th colspan='4' style="text-align: center;    color: #7a0a0a;"> <span>{{data.Conclusion}}</span></th>
+                </tr>
+                {% endfor %}
+              </tbody>
+             
+            </table>
+            <div class="row">
+              <div class="col-md-6 col-lg-6 col-sm-12">
+                <table class="table table-stripped">
+                  <thead>
+                    <tr>
+                      <th colspan="2" style="    background: #0a5b7a; color: white;">
+                        ETS Decomposition
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for data in aquifer_data %}  
+                    <tr>
+                      <th>Stationarity</th><td {% if data.Stationarity == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Stationarity}}</td>
+                    </tr>
+                    <tr>
+                      <th>Trend</th><td {% if data.Trend == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Trend}}</td>
+                    </tr>
+                    <tr>
+                      <th>Cyclic</th><td {% if data.Cyclic == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Cyclic}}</td>
+                    </tr>
+                   
+                    {% endfor %}
+                  </tbody>
+                 
+                </table>
+              </div>
+              <div class="col-md-6 col-lg-6 col-sm-12">
+                <table class="table table-stripped">
+                  <thead>
+                    <tr>
+                      <th colspan="2" style="    background: #0a5b7a; color: white;">
+                        Initial Analysis
+                      </th>
+                    </tr>
+                  
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        Target
+                      </th>
+                      <td colspan="4">
+                        Temperature
+                      </td>
+                    </tr>
+                    <tr >
+                      <th rowspan="4">
+                        Features
+                      </th>
+                      <td>
+                        Date, Rainfall, Drainage_volume, River_hydrometry
+                      </td>
+                      <!-- <tr>  <td>Rainfall</td></tr>
+                      <tr> <td>Drainage_volume</td></tr>
+                      <tr> <td>River_hydrometry</td></tr> -->
+                     
+                     
+                     
+                     
+                    
+                    </tr>
+                  </tbody>
+                  <tbody>
+        
+                  </tbody>
+                </table>
+              </div>
+              
+      
+          
+            </div>
+          </div>
+            
+          
+        
+        </div>
+        
+     
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12">
+        <div class="row">
+          <div class="cont-types">
+            <div class="text-center">
+              <h4 class="title-subheader">Luco</h4>
+            </div>
+            <table class="table table-bordered">
+               
+              <tbody>
+                {% for data in luco_summary %}  
+                <tr>
+                  <th>Number of Rows</th><td>{{data.Rows}}</td>
+                  <th>Number of Columns</th><td>{{data.Columns}}</td>
+                </tr>
+              
+                <tr>
+                  <th>Start Date</th><td>{{data.SDate}}</td>
+                  <th>End Date</th><td>{{data.EDate}}</td>
+                </tr>
+               
+                <tr>
+                  <th>Model</th><td>{{data.Model}}</td>
+                  <th>RMSE</th><td>{{data.RMSE}}</td>
+                </tr>
+                
+                <tr style="    height: 94px;">
+                  <th colspan='4' style="text-align: center;    color: #7a0a0a;"> <span>{{data.Conclusion}} </span></th>
+              
+               </tr>
+                {% endfor %}
+              </tbody>
+             
+            </table>
+            <div class="row">
+              <div class="col-md-6 col-lg-6 col-sm-12">
+                <table class="table table-stripped">
+                  <thead>
+                    <tr>
+                      <th colspan="2" style="    background: #0a5b7a; color: white;">
+                        ETS Decomposition
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for data in aquifer_data %}  
+                    <tr>
+                      <th>Stationarity</th><td {% if data.Stationarity == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Stationarity}}</td>
+                    </tr>
+                    <tr>
+                      <th>Trend</th><td {% if data.Trend == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Trend}}</td>
+                    </tr>
+                    <tr>
+                      <th>Cyclic</th><td {% if data.Cyclic == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Cyclic}}</td>
+                    </tr>
+                   
+                    {% endfor %}
+                  </tbody>
+                 
+                </table>
+              </div>
+              <div class="col-md-6 col-lg-6 col-sm-12">
+                <table class="table table-stripped">
+                  <thead>
+                    <tr>
+                      <th colspan="2" style="    background: #0a5b7a; color: white;">
+                        Initial Analysis
+                      </th>
+                    </tr>
+                  
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        Target
+                      </th>
+                      <td colspan="4">
+                        Temperature
+                      </td>
+                    </tr>
+                    <tr >
+                      <th rowspan="4">
+                        Features
+                      </th>
+                      <td>
+                        Date, Rainfall, Drainage_volume, River_hydrometry
+                      </td>
+                      <!-- <tr>  <td>Rainfall</td></tr>
+                      <tr> <td>Drainage_volume</td></tr>
+                      <tr> <td>River_hydrometry</td></tr> -->
+                     
+                     
+                     
+                     
+                    
+                    </tr>
+                  </tbody>
+                  <tbody>
+        
+                  </tbody>
+                </table>
+              </div>
+              
+      
+          
+            </div>
+          </div>
+        </div>
+       
+     
+      </div>
+ 
+    
+    </div>
+
       <!-- {% for data in aquifer_data %}
       <h4>{{ data.River }}</h4>
       -->
