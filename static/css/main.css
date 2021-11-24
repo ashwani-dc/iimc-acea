@@ -84,7 +84,8 @@ color:white;
 
 .title-subheader{
     font-weight: 600;
-    color: #690a20;
+    color: #0a3c87;
+    text-decoration: underline;
 }
 
 .logo-header{
@@ -95,6 +96,7 @@ color:white;
 .cont-types {
     box-shadow: 2px 2px 8px 3px #d3cfcf;
     padding: 5%;
+    height: 550px;
 }
 .div-para p{
     color: black;
@@ -109,4 +111,13 @@ table.table.table-bordered {
 }
 .col-md-6.col-lg-6.col-sm-12 {
     padding: 1.5%;
+}
+.thConclusion{
+    text-align: center;   
+    color: #c310ad;
+}
+
+.div-para {
+    text-align: justify;
+    height: 40%;
 }

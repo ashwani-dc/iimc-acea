@@ -86,10 +86,10 @@
     <h3 class="logo-header">Acea Smart Water Analysis</h3>
     <div style="float: right;">
       <a href="{{url_for('index')}}">Home</a>
-      <a href="{{url_for('river')}}">River</a>
-      <a href="{{url_for('lake')}}">Lake</a>
       <a href="{{url_for('aquifer')}}">Aquifer</a>
       <a href="{{url_for('spring')}}">Water Spring</a>
+      <a href="{{url_for('river')}}">River</a>
+      <a href="{{url_for('lake')}}">Lake</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
@@ -110,11 +110,11 @@
             <div class="text-center">
               <h4 class="title-subheader">Petrignano</h4>
             </div>
-            <!-- <div class="div-para">
+            <div class="div-para">
               <p>
                 The wells field of the alluvial plain between Ospedalicchio di Bastia Umbra and Petrignano is fed by three underground aquifers separated by low permeability septa. The aquifer can be considered a water table groundwater and is also fed by the Chiascio river. The groundwater levels are influenced by the following parameters: rainfall, depth to groundwater, temperatures and drainage volumes, level of the Chiascio river.
               </p>
-            </div> -->
+            </div>
             <table class="table table-bordered">
              
               <tbody>
@@ -128,20 +128,23 @@
                   <th>Start Date</th><td>{{data.SDate}}</td>
                   <th>End Date</th><td>{{data.EDate}}</td>
                 </tr>
-               
+                <tr>
+                  <th>Target</th><td>{{data.Target}}</td>
+                  <th>Feature</th><td>{{data.Features}}</td>
+                </tr>
                 <tr>
                   <th>Model</th><td>{{data.Model}}</td>
                   <th>RMSE</th><td>{{data.RMSE}}</td>
                 </tr>
                
                 <tr>
-                  <th colspan='4' style="text-align: center;    color: #7a0a0a;"> <span>{{data.Conclusion}}</span></th>
+                  <th class="thConclusion" colspan='4' > <span>{{data.Conclusion}}</span></th>
                 </tr>
                 {% endfor %}
               </tbody>
              
             </table>
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-md-6 col-lg-6 col-sm-12">
                 <table class="table table-stripped">
                   <thead>
@@ -194,13 +197,7 @@
                       <td>
                         Date, Rainfall, Drainage_volume, River_hydrometry
                       </td>
-                      <!-- <tr>  <td>Rainfall</td></tr>
-                      <tr> <td>Drainage_volume</td></tr>
-                      <tr> <td>River_hydrometry</td></tr> -->
-                     
-                     
-                     
-                     
+                    
                     
                     </tr>
                   </tbody>
@@ -212,7 +209,7 @@
               
       
           
-            </div>
+            </div> -->
           </div>
             
           
@@ -227,6 +224,11 @@
             <div class="text-center">
               <h4 class="title-subheader">Auser</h4>
             </div>
+            <div class="div-para">
+              <p>
+                This waterbody consists of two subsystems, called NORTH and SOUTH, where the former partly influences the behavior of the latter. Indeed, the north subsystem is a water table (or unconfined) aquifer while the south subsystem is an artesian (or confined) groundwater. The levels of the NORTH sector are represented by the values of the SAL, PAG, CoS and DIEC wells, while the levels of the SOUTH sector by the LT2 well.
+              </p>
+            </div>
             <table class="table table-bordered">
                
               <tbody>
@@ -240,20 +242,23 @@
                   <th>Start Date</th><td>{{data.SDate}}</td>
                   <th>End Date</th><td>{{data.EDate}}</td>
                 </tr>
-               
+                <tr>
+                  <th>Target</th><td>{{data.Target}}</td>
+                  <th>Feature</th><td>{{data.Features}}</td>
+                </tr>
                 <tr>
                   <th>Model</th><td>{{data.Model}}</td>
                   <th>RMSE</th><td>{{data.RMSE}}</td>
                 </tr>
                 
                 <tr>
-                  <th colspan='4' style="text-align: center;    color: #7a0a0a;"> <span>{{data.Conclusion}}</span></th>
+                  <th class="thConclusion" colspan='4' > <span>{{data.Conclusion}}</span></th>
                 </tr>
                 {% endfor %}
               </tbody>
              
             </table>
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-md-6 col-lg-6 col-sm-12">
                 <table class="table table-stripped">
                   <thead>
@@ -306,14 +311,7 @@
                       <td>
                         Date, Rainfall, Drainage_volume, River_hydrometry
                       </td>
-                      <!-- <tr>  <td>Rainfall</td></tr>
-                      <tr> <td>Drainage_volume</td></tr>
-                      <tr> <td>River_hydrometry</td></tr> -->
-                     
-                     
-                     
-                     
-                    
+                   
                     </tr>
                   </tbody>
                   <tbody>
@@ -324,7 +322,7 @@
               
       
           
-            </div>
+            </div> -->
           </div>
         </div>
        
@@ -342,11 +340,11 @@
             <div class="text-center">
               <h4 class="title-subheader">Doganella</h4>
             </div>
-            <!-- <div class="div-para">
+            <div class="div-para">
               <p>
-                The wells field of the alluvial plain between Ospedalicchio di Bastia Umbra and Petrignano is fed by three underground aquifers separated by low permeability septa. The aquifer can be considered a water table groundwater and is also fed by the Chiascio river. The groundwater levels are influenced by the following parameters: rainfall, depth to groundwater, temperatures and drainage volumes, level of the Chiascio river.
+                The wells field Doganella is fed by two underground aquifers not fed by rivers or lakes but fed by meteoric infiltration. The upper aquifer is a water table with a thickness of about 30m. The lower aquifer is a semi-confined artesian aquifer with a thickness of 50m and is located inside lavas and tufa products. These aquifers are accessed through wells called Well 1, ..., Well 9. Approximately 80% of the drainage volumes come from the artesian aquifer. The aquifer levels are influenced by the following parameters: rainfall, humidity, subsoil, temperatures and drainage volumes.
               </p>
-            </div> -->
+            </div>
             <table class="table table-bordered">
              
               <tbody>
@@ -360,20 +358,23 @@
                   <th>Start Date</th><td>{{data.SDate}}</td>
                   <th>End Date</th><td>{{data.EDate}}</td>
                 </tr>
-               
+                <tr>
+                  <th>Target</th><td>{{data.Target}}</td>
+                  <th>Feature</th><td>{{data.Features}}</td>
+                </tr>
                 <tr>
                   <th>Model</th><td>{{data.Model}}</td>
                   <th>RMSE</th><td>{{data.RMSE}}</td>
                 </tr>
                
                 <tr style="    height: 94px;">
-                  <th colspan='4' style="text-align: center;    color: #7a0a0a;"> <span>{{data.Conclusion}}</span></th>
+                  <th class="thConclusion" colspan='4' > <span>{{data.Conclusion}}</span></th>
                 </tr>
                 {% endfor %}
               </tbody>
              
             </table>
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-md-6 col-lg-6 col-sm-12">
                 <table class="table table-stripped">
                   <thead>
@@ -426,14 +427,7 @@
                       <td>
                         Date, Rainfall, Drainage_volume, River_hydrometry
                       </td>
-                      <!-- <tr>  <td>Rainfall</td></tr>
-                      <tr> <td>Drainage_volume</td></tr>
-                      <tr> <td>River_hydrometry</td></tr> -->
                      
-                     
-                     
-                     
-                    
                     </tr>
                   </tbody>
                   <tbody>
@@ -444,7 +438,7 @@
               
       
           
-            </div>
+            </div> -->
           </div>
             
           
@@ -459,6 +453,11 @@
             <div class="text-center">
               <h4 class="title-subheader">Luco</h4>
             </div>
+            <div class="div-para">
+              <p>
+                The Luco wells field is fed by an underground aquifer. This aquifer not fed by rivers or lakes but by meteoric infiltration at the extremes of the impermeable sedimentary layers. Such aquifer is accessed through wells called Well 1, Well 3 and Well 4 and is influenced by the following parameters: rainfall, depth to groundwater, temperature and drainage volumes.
+              </p>
+            </div>
             <table class="table table-bordered">
                
               <tbody>
@@ -472,21 +471,24 @@
                   <th>Start Date</th><td>{{data.SDate}}</td>
                   <th>End Date</th><td>{{data.EDate}}</td>
                 </tr>
-               
+                <tr>
+                  <th>Target</th><td>{{data.Target}}</td>
+                  <th>Feature</th><td>{{data.Features}}</td>
+                </tr>
                 <tr>
                   <th>Model</th><td>{{data.Model}}</td>
                   <th>RMSE</th><td>{{data.RMSE}}</td>
                 </tr>
                 
                 <tr style="    height: 94px;">
-                  <th colspan='4' style="text-align: center;    color: #7a0a0a;"> <span>{{data.Conclusion}} </span></th>
+                  <th class="thConclusion" colspan='4' > <span>{{data.Conclusion}} </span></th>
               
                </tr>
                 {% endfor %}
               </tbody>
              
             </table>
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-md-6 col-lg-6 col-sm-12">
                 <table class="table table-stripped">
                   <thead>
@@ -539,13 +541,7 @@
                       <td>
                         Date, Rainfall, Drainage_volume, River_hydrometry
                       </td>
-                      <!-- <tr>  <td>Rainfall</td></tr>
-                      <tr> <td>Drainage_volume</td></tr>
-                      <tr> <td>River_hydrometry</td></tr> -->
-                     
-                     
-                     
-                     
+                    
                     
                     </tr>
                   </tbody>
@@ -557,7 +553,7 @@
               
       
           
-            </div>
+            </div> -->
           </div>
         </div>
        

@@ -8,81 +8,91 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
   
   <style>
-      body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-    
-      .topnav {
-        overflow: hidden;
-        background: linear-gradient(45deg, black, #124a5f) !important;
-        color: white;
-      }
-    
-    
-      .topnav a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-      }
-    
-      .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-    
-      .topnav a.active {
-        background-color: #04AA6D;
-        color: white;
-      }
-    
-      .topnav .icon {
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    .topnav {
+      overflow: hidden;
+      background: linear-gradient(45deg, black, #124a5f) !important;
+      color: white;
+    }
+  
+  
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+  
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+  
+    .topnav .icon {
+      display: none;
+    }
+  
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {
         display: none;
       }
-    
-      @media screen and (max-width: 600px) {
-        .topnav a:not(:first-child) {
-          display: none;
-        }
-    
-        .topnav a.icon {
-          float: right;
-          display: block;
-        }
+  
+      .topnav a.icon {
+        float: right;
+        display: block;
       }
-    
-      @media screen and (max-width: 600px) {
-        .topnav.responsive {
-          position: relative;
-        }
-    
-        .topnav.responsive .icon {
-          position: absolute;
-          right: 0;
-          top: 0;
-        }
-    
-        .topnav.responsive a {
-          float: none;
-          display: block;
-          text-align: left;
-        }
+    }
+  
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {
+        position: relative;
       }
-    </style>
+  
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+  
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+  
+    .div-para {
+      text-align: justify;
+      height: 28%;
+    }
+  
+    .div-para {
+      text-align: justify;
+      height: 34%;
+    }
+  </style>
 </head>
 <body>
   <div class="topnav" id="myTopnav">
     <h3 class="logo-header">Acea Smart Water Analysis</h3>
     <div style="float: right;">
       <a href="{{url_for('index')}}">Home</a>
-      <a href="{{url_for('river')}}">River</a>
-      <a href="{{url_for('lake')}}">Lake</a>
       <a href="{{url_for('aquifer')}}">Aquifer</a>
       <a href="{{url_for('spring')}}">Water Spring</a>
+      <a href="{{url_for('river')}}">River</a>
+      <a href="{{url_for('lake')}}">Lake</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
@@ -92,149 +102,221 @@
   </div>
   <div class="container">
     <div class="text-center">
-      <h2 class="title-header">Spring</h2>
+      <h2 class="title-header">Water Spring</h2>
   </div>
 
   <div class="row">
     <div class="col-md-6 col-lg-6 col-sm-12">
-      <div class="cont-types">
-        <div class="text-center">
-          <h4 class="title-subheader">Petrignano</h4>
-        </div>
-        <table class="table table-stripped">
-          <thead>
-            <tr>
-              <th colspan="2" style="    background: #0a5b7a; color: white;">
-                ETS Decomposition
-              </th>
-            </tr>
-          </thead>
-          <!-- <tbody>
-            {% for data in aquifer_data %}  
-            <tr>
-              <th>Stationarity</th><td {% if data.Stationarity == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Stationarity}}</td>
-            </tr>
-            <tr>
-              <th>Trend</th><td {% if data.Trend == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Trend}}</td>
-            </tr>
-            <tr>
-              <th>Cyclic</th><td {% if data.Cyclic == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Cyclic}}</td>
-            </tr>
+      <div class="row">
+        <div class="cont-types">
+          <div class="text-center">
+            <h4 class="title-subheader">Amiata</h4>
+          </div>
+          <div class="div-para">
+            <p>
+              The Amiata waterbody is composed of a volcanic aquifer not fed by rivers or lakes but fed by meteoric infiltration. This aquifer is accessed through Ermicciolo, Arbure, Bugnano and Galleria Alta water springs. The levels and volumes of the four sources are influenced by the parameters: rainfall, depth to groundwater, hydrometry, temperatures and drainage volumes.
+            </p>
+          </div>
+          <table class="table table-bordered">
            
-            {% endfor %}
-          </tbody> -->
-         
-        </table>
-
-        <table class="table table-stripped">
-          <thead>
-            <tr>
-              <th colspan="5" style="    background: #0a5b7a; color: white;">
-                Initial Analysis
-              </th>
-            </tr>
-          
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                Target
-              </th>
-              <td colspan="4">
-                Temperature
-              </td>
-            </tr>
-            <tr>
-              <th>
-                Features
-              </th>
-              <td>
-                Date
-              </td>
-              <td>Rainfall</td>
-              <td>Drainage_volume</td>
-              <td>River_hydrometry</td>
+            <tbody>
+              {% for data in spring_amiata_summary %}  
+              <tr>
+                <th>Number of Rows</th><td>{{data.Rows}}</td>
+                <th>Number of Columns</th><td>{{data.Columns}}</td>
+              </tr>
             
-            </tr>
-          </tbody>
-          <tbody>
-
-          </tbody>
-        </table>
+              <tr>
+                <th>Start Date</th><td>{{data.SDate}}</td>
+                <th>End Date</th><td>{{data.EDate}}</td>
+              </tr>
+              <tr>
+                <th>Target</th><td>{{data.Target}}</td>
+                <th>Feature</th><td>{{data.Features}}</td>
+              </tr>
+              <tr>
+                <th>Model</th><td>{{data.Model}}</td>
+                <th>RMSE</th><td>{{data.RMSE}}</td>
+              </tr>
+             
+              <tr style="height: 93px;">
+                <th class="thConclusion" colspan='4' > <span>{{data.Conclusion}}</span></th>
+              </tr>
+              {% endfor %}
+            </tbody>
+           
+          </table>
+          <!-- <div class="row">
+            <div class="col-md-6 col-lg-6 col-sm-12">
+              <table class="table table-stripped">
+                <thead>
+                  <tr>
+                    <th colspan="2" style="    background: #0a5b7a; color: white;">
+                      ETS Decomposition
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for data in aquifer_data %}  
+                  <tr>
+                    <th>Stationarity</th><td {% if data.Stationarity == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Stationarity}}</td>
+                  </tr>
+                  <tr>
+                    <th>Trend</th><td {% if data.Trend == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Trend}}</td>
+                  </tr>
+                  <tr>
+                    <th>Cyclic</th><td {% if data.Cyclic == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Cyclic}}</td>
+                  </tr>
+                 
+                  {% endfor %}
+                </tbody>
+               
+              </table>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12">
+              <table class="table table-stripped">
+                <thead>
+                  <tr>
+                    <th colspan="2" style="    background: #0a5b7a; color: white;">
+                      Initial Analysis
+                    </th>
+                  </tr>
+                
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>
+                      Target
+                    </th>
+                    <td colspan="4">
+                      Temperature
+                    </td>
+                  </tr>
+                  <tr >
+                    <th rowspan="4">
+                      Features
+                    </th>
+                    <td>
+                      Date, Rainfall, Drainage_volume, River_hydrometry
+                    </td>
+                  
+                  
+                  </tr>
+                </tbody>
+                <tbody>
+      
+                </tbody>
+              </table>
+            </div>
+            
+    
+        
+          </div> -->
+        </div>
+          
+        
+      
       </div>
+      
    
     </div>
     <div class="col-md-6 col-lg-6 col-sm-12">
-      <div class="cont-types">
-        <div class="text-center">
-          <h4 class="title-subheader">Auser</h4>
-        </div>
-        <table class="table table-stripped">
-          <thead>
-            <tr>
-              <th colspan="2" style="    background: #0a5b7a; color: white;">
-                ETS Decomposition
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for data in aquifer_data %}  
-            <tr>
-              <th>Stationarity</th><td {% if data.Stationarity == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Stationarity}}</td>
-            </tr>
-            <tr>
-              <th>Trend</th><td {% if data.Trend == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Trend}}</td>
-            </tr>
-            <tr>
-              <th>Cyclic</th><td {% if data.Cyclic == 'Yes' %} class="success" {% else %} class="error" {% endif %}>{{data.Cyclic}}</td>
-            </tr>
-           
-            {% endfor %}
-          </tbody>
-         
-        </table>
-
-        <table class="table table-stripped">
-          <thead>
-            <tr>
-              <th colspan="5" style="    background: #0a5b7a; color: white;">
-                Initial Analysis
-              </th>
-            </tr>
-          
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                Target
-              </th>
-              <td colspan="4">
-                Temperature
-              </td>
-            </tr>
-            <tr>
-              <th>
-                Features
-              </th>
-              <td>
-                Date
-              </td>
-              <td>Rainfall</td>
-              <td>Drainage_volume</td>
-              <td>River_hydrometry</td>
+      <div class="row">
+        <div class="cont-types">
+          <div class="text-center">
+            <h4 class="title-subheader">Madonna Di Canneto</h4>
+          </div>
+          <div class="div-para">
+            <p>
+              The Madonna di Canneto spring is situated at an altitude of 1010m above sea level in the Canneto valley. It does not consist of an aquifer and its source is supplied by the water catchment area of the river Melfa.
+            </p>
+          </div>
+          <table class="table table-bordered">
+             
+            <tbody>
+              {% for data in spring_madonna_summary %}  
+              <tr>
+                <th>Number of Rows</th><td>{{data.Rows}}</td>
+                <th>Number of Columns</th><td>{{data.Columns}}</td>
+              </tr>
             
-            </tr>
-          </tbody>
-          <tbody>
-
-          </tbody>
-        </table>
+              <tr>
+                <th>Start Date</th><td>{{data.SDate}}</td>
+                <th>End Date</th><td>{{data.EDate}}</td>
+              </tr>
+              <tr>
+                <th>Target</th><td>{{data.Target}}</td>
+                <th>Feature</th><td>{{data.Features}}</td>
+              </tr>
+              <tr>
+                <th>Model</th><td>{{data.Model}}</td>
+                <th>RMSE</th><td>{{data.RMSE}}</td>
+              </tr>
+              
+              <tr style="height: 93px;">
+                <th class="thConclusion" colspan='4' > <span>{{data.Conclusion}}</span></th>
+              </tr>
+              {% endfor %}
+            </tbody>
+           
+          </table>
+         
+        </div>
       </div>
+     
    
     </div>
 
   
   </div>
+
+
+  <div class="row">
+    <div class="cont-types" style="    height: auto !important;">
+      <div class="text-center">
+        <h4 class="title-subheader">Lupa</h4>
+      </div>
+      <div class="div-para" style="    height: auto !important;">
+        <p>
+          Lupa water spring is located in the Rosciano Valley, on the left side of the Nera river. The waters emerge at an altitude of about 375 meters above sea level through a long draining tunnel that crosses, in its final section, lithotypes and essentially calcareous rocks. It provides drinking water to the city of Terni and the towns around.
+        </p>
+      </div>
+      <table class="table table-bordered">
+       
+        <tbody>
+          {% for data in spring_lupa_summary %}  
+          <tr>
+            <th>Number of Rows</th><td>{{data.Rows}}</td>
+            <th>Number of Columns</th><td>{{data.Columns}}</td>
+          </tr>
+        
+          <tr>
+            <th>Start Date</th><td>{{data.SDate}}</td>
+            <th>End Date</th><td>{{data.EDate}}</td>
+          </tr>
+          <tr>
+            <th>Target</th><td>{{data.Target}}</td>
+            <th>Feature</th><td>{{data.Features}}</td>
+          </tr>
+          <tr>
+            <th>Model</th><td>{{data.Model}}</td>
+            <th>RMSE</th><td>{{data.RMSE}}</td>
+          </tr>
+         
+          <tr >
+            <th class="thConclusion" colspan='4' > <span>{{data.Conclusion}}</span></th>
+          </tr>
+          {% endfor %}
+        </tbody>
+       
+      </table>
+   
+    </div>
+
+
+  
+  </div>
+
   </div>
    
 
