@@ -24,7 +24,7 @@ petrignano_summary=[{
 	'Model':'LSTM',
 	'RMSE':'0.315',
 	'Conclusion':'The metrics are low, which mean that the model is good for future predictions',
-	'Target':'Temperature',
+	'Target':'Depth to Groundwater',
 	'Features':'Date, Rainfall, Drainage_volume, River_hydrometry'
 }]
 auser_summary=[{
@@ -35,7 +35,7 @@ auser_summary=[{
 	'Model':'LSTM',
 	'RMSE':'9.660',
 	'Conclusion':'Model fits for prediction',
-	'Target':'Temperature',
+	'Target':'Depth to Groundwater',
 	'Features':'Date, Rainfall, Drainage_volume, River_hydrometry'
 }]
 
@@ -47,7 +47,7 @@ doganella_summary=[{
 	'Model':'LSTM',
 	'RMSE':'2303394.249',
 	'Conclusion':'The model is not fitting well with the groundtruth. I think there are too much variables to make him fit. But we can see that the set of these 9 models to predict the depth to groundwater is using always the same variables : the temperature and the volume have a huge impact on it.',
-	'Target':'Temperature',
+	'Target':'Depth to Groundwater',
 	'Features':'Date, Rainfall, Drainage_volume, River_hydrometry'
 }]
 luco_summary=[{
@@ -58,7 +58,7 @@ luco_summary=[{
 	'Model':'LSTM',
 	'RMSE':'104.257',
 	'Conclusion':'The prediction fits with the trend of the ground truth but again, many peaks come to rise the error metrics.',
-	'Target':'Temperature',
+	'Target':'Depth to Groundwater',
 	'Features':'Date, Rainfall, Drainage_volume, River_hydrometry'
 }]
 
@@ -70,7 +70,7 @@ spring_amiata_summary=[{
 	'Model':'LSTM',
 	'RMSE':'12092.499',
 	'Conclusion':'The model is not fitting well with the ground truth. According to this model, the other flow rates depend of the galleria alta flow rate. The temperature is also a variable that make us the predict the flow rate',
-	'Target':'Temperature',
+	'Target':'Flow Rate',
 	'Features':'Date, Rainfall, Drainage_volume, River_hydrometry'
 }]
 spring_madonna_summary=[{
@@ -81,7 +81,7 @@ spring_madonna_summary=[{
 	'Model':'LSTM',
 	'RMSE':'1440699.158',
 	'Conclusion':'The Main reason for higher RMSE is there are  always some peaks that make higher the error metrics.',
-	'Target':'Temperature',
+	'Target':'Flow Rate',
 	'Features':'Date, Rainfall, Drainage_volume, River_hydrometry'
 }]
 spring_lupa_summary=[{
@@ -92,7 +92,7 @@ spring_lupa_summary=[{
 	'Model':'LSTM',
 	'RMSE':'833.960',
 	'Conclusion':'The model is not fitting well with the ground truth.',
-	'Target':'Temperature',
+	'Target':'Flow Rate',
 	'Features':'Date, Rainfall, Drainage_volume, River_hydrometry'
 }]
 
@@ -104,7 +104,7 @@ river_summary=[{
 	'Model':'LSTM',
 	'RMSE':'0.034',
 	'Conclusion':'The model is fitting well with the ground truth.',
-	'Target':'Temperature',
+	'Target':'Hydrometry',
 	'Features':'Date, Rainfall, Drainage_volume, River_hydrometry'
 }]
 
@@ -116,7 +116,7 @@ lake_summary=[{
 	'Model':'LSTM',
 	'RMSE':'0.114',
 	'Conclusion':'The metrics are low, which mean that the model is good for future predictions.',
-	'Target':'Temperature',
+	'Target':'Lake Level, Flow Rate',
 	'Features':'Date, Rainfall, Drainage_volume, River_hydrometry'
 }]
 
