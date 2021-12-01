@@ -22,7 +22,7 @@ petrignano_summary=[{
 	'SDate':'14-03-2006',
 	'EDate':'30-06-2020',
 	'Model':'LSTM',
-	'RMSE':'0.315',
+	'RMSE':'0.127',
 	'Conclusion':'The metrics are low, which mean that the model is good for future predictions',
 	'Target':'Depth to Groundwater',
 	'Features':'Date, Rainfall, Drainage_volume, River_hydrometry'
